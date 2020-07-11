@@ -1,3 +1,4 @@
+<!--  This is an index page  -->
 # Collection of Rakitine clan stories
 
 ## Val's stories
@@ -6,4 +7,4 @@
 - [Из далека долго течет река Волга …](val__volga.md)
 - [Если есть сетка - подходи соседка!](val__bazar.md)
 
-<!--  This is an index page  -->
+[Home](https://orakitine.github.io/rakitine-family/)
