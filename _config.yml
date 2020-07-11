@@ -10,6 +10,12 @@ collections:
   posts:
     output: true
     permalink: /blog/:slug
+  stories:
+    output: true
+    permalink: /stories/:slug
+  posts:
+    output: true
+    permalink: /blog/:slug
   projects:
     output: true
     permalink: /project/:slug
@@ -35,6 +41,12 @@ defaults:
   -
     scope:
       path: ""
+      type: "stories"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
       type: "projects"
     values:
       layout: "project"
@@ -52,6 +64,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-paginate: 6
-paginate_path: "/blog/page:num/"
+paginate: 2
+paginate_path: "page:num/"
   
