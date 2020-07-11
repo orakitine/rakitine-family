@@ -1,4 +1,4 @@
-# Collection of stories
+# Collection of Rakitine clan stories
 
 ## Val's stories
 
