@@ -24,7 +24,7 @@ subtitle: Here are some stories to read.
     <ul>
 	{% for story in site.stories %}
 		{% if story.is_system_or_draft is 'N' %}	
-			<li><a href="{{ story.url | relative_url }}">{{ story.title }}</a></li>
+			<li><a href="{{ story.url | relative_url }}">{{ story.title }} - {{ story.is_system_or_draft }}</a></li>
 		{% endif %}
     	{% endfor %}    
     </ul>
