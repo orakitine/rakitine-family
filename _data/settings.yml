@@ -11,7 +11,7 @@ header_settings:
 menu_settings:
   menu_items:
     - title: 'Stories'
-      url: '/stories'
+      url: '/stories/'
     - title: 'About'
       url: '/about'
     - title: 'Contact'
