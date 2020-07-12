@@ -23,7 +23,7 @@ subtitle: Here are some stories to read.
 
     <ul>
 	{% for story in site.stories %}
-		{% if story != 'zzz__example_post.md.example' %}	
+		{% if story.title != 'Demo Post' %}	
 			<li><a href="{{ story.url | relative_url }}">{{ story.title }}</a></li>
 		{% endif %}
     	{% endfor %}    
