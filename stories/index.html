@@ -13,7 +13,9 @@ featured_image: images/tadjikistan.jpg
 
 <section class="stories">
 	<ul>
-		{% for story in site.stories %}
+		{% assign stories_sortbydate = site.stories | sort: 'date' %}
+		{% assign stories_sortbydate-reversed = stories_sortbydate | reverse %}
+		{% for story in stories_sortbydate-reversed %}
 		<li class="story">
 			<a href="{{ story.url | relative_url }}">
 				<article>
@@ -23,8 +25,9 @@ featured_image: images/tadjikistan.jpg
 						</div>
 						<div class="story__preview">
 							<h3 class="story__title">{{ story.title }}</h3>
-							<p class="story__attributes">{{ story.date | date_to_long_string }}{% if story.author %} - by {{ story.author }}{% endif %}</p>
-							<p class="story__description">{{ story.excerpt }}  </p>
+							<p class="story__attributes">{{ story.date | date_to_long_string }}{% if story.author %} - by
+								{{ story.author }}{% endif %}</p>
+							<p class="story__description">{{ story.excerpt }} </p>
 						</div>
 					</div>
 				</article>
