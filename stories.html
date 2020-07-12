@@ -20,11 +20,10 @@ subtitle: Here are some stories to read.
 	<div class="wrap">
 
     {{ paginator }}
-rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
     <ul>
 	{% for story in site.stories %}
-		{% if story.is_system_or_draft is 'N' %}	
-			<li><a href="{{ story.url | relative_url }}">{{ story.title }} -tttttt {{ story.is_system_or_draft }}</a></li>
+		{% if story.title is not 'Demo Post' %}	
+			<li><a href="{{ story.url | relative_url }}">{{ story.title }}</a></li>
 		{% endif %}
     	{% endfor %}    
     </ul>
