@@ -1,32 +1,34 @@
 ---
 layout: default
-title: Stories
-subtitle: Here are some stories to read.
 featured_image: images/tadjikistan.jpg
 ---
 
 <section class="intro">
-
 	<div class="wrap">
-
-		<h1>{{ page.title }}</h1>
-		<p>{{ page.subtitle }}</p>
-
+		<h1>Stories</h1>
+		<p>Here are some stories to read.</p>
 	</div>
-
 </section>
 
-<section class="portfolio">
-
-	<div class="wrap">
-
-    {{ paginator }}
-    <ul>
-	{% for story in site.stories %}
-			<li><a href="{{ story.url | relative_url }}">{{ story.title }}</a></li>
-    	{% endfor %}    
-    </ul>
-
-	</div>
-
+<section class="stories">
+	<ul>
+		{% for story in site.stories %}
+		<li class="story">
+			<a href="{{ story.url | relative_url }}">
+				<article>
+					<div class="story__wrap">
+						<div class="story__image-wrap">
+							<div class="story__image" style="background-image: url({{ story.featured_image | relative_url }});"></div>
+						</div>
+						<div class="story__preview">
+							<h3 class="story__title">{{ story.title }}</h3>
+							<p class="story__attributes">{{ story.date | date_to_long_string }}{% if story.author %} - by {{ story.author }}{% endif %}</p>
+							<p class="story__description">{{ story.excerpt }}  </p>
+						</div>
+					</div>
+				</article>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
 </section>
