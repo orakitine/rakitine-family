@@ -21,15 +21,10 @@ featured_image: images/tadjikistan.jpg
 	<div class="wrap">
 
     {{ paginator }}
-
     <ul>
-
-		{% for story in site.stories reversed %}
-
-    <li><a href="{{ story.url | relative_url }}">{{ story.title }}</a></li>
-
-    {% endfor %}
-    
+	{% for story in site.stories %}
+			<li><a href="{{ story.url | relative_url }}">{{ story.title }}</a></li>
+    	{% endfor %}    
     </ul>
 
 	</div>
