@@ -142,6 +142,7 @@ p, ul, ol {
 	font-weight: $p-weight;
 	line-height: $p-lineheight;
 	letter-spacing: $p-spacing;
+	color: $text-medium-color;
 
 	@include mq(tabletp) {
 		font-size: $p-medium;
